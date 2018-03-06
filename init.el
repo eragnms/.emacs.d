@@ -10,7 +10,7 @@
          user-emacs-directory)
         ((boundp 'user-init-directory)
          user-init-directory)
-        (t "~/.emacs.d/my_config_files/")))
+        (t "~/.emacs.d/")))
 
 
 (defun load-user-file (file)
@@ -19,6 +19,8 @@
   (load-file (expand-file-name file user-init-dir)))
 
 (load-user-file "packages.el")
+(load-user-file "apperance.el")
+(load-user-file "python.el")
 
 
 
