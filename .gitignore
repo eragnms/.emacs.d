@@ -1,3 +1,4 @@
 *
 !.gitignore
 !init.el
+!my_config_files/*
