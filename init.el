@@ -12,7 +12,6 @@
          user-init-directory)
         (t "~/.emacs.d/")))
 
-
 (defun load-user-file (file)
   (interactive "f")
   "Load a file in current user's configuration directory"
@@ -26,3 +25,6 @@
 (load-user-file "restructured.el")
 (load-user-file "latex.el")
 (load-user-file "perl.el")
+(load-user-file "gnu_plot.el")
+(load-user-file "octave.el")
+(load-user-file "c.el")
