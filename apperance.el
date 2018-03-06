@@ -1,7 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Apperance
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq inhibit-startup-message t) ;; hide the startup message
+;; hide the startup message
+(setq inhibit-startup-message t)
+
 ;; enable line numbers globally and add a padding of choice
 (global-linum-mode t)
 (if (display-graphic-p)
@@ -10,6 +9,9 @@
       ())
       (setq linum-format "%4d \u2502 ")) ; vertical bar
 ;;(setq linum-format "%d ") ; just a space
+
+;; Display also the column number
+(setq column-number-mode t)
 
 ;; Window size and start position
 (when (string= system-name "vmanjaro")
