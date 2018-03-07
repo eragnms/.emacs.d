@@ -27,3 +27,11 @@
     ;; else (on a terminal, seems ok on termius terminal set to "vt100")
        (load-theme 'whiteboard))
 
+;; Set default font
+;(set-face-attribute 'default nil
+;                    :family "Monospace Regular"
+;                    :height 110
+;                    :weight 'normal
+;                    :width 'normal)
+(add-to-list 'default-frame-alist
+             '(font . "DejaVu Sans Mono-10"))
