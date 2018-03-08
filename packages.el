@@ -25,7 +25,8 @@
     wgrep
     iedit
     better-defaults
-    py-autopep8))
+    py-autopep8
+    org))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)

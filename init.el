@@ -28,6 +28,7 @@
 (load-user-file "gnu_plot.el")
 (load-user-file "octave.el")
 (load-user-file "c.el")
+(load-user-file "org.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -36,7 +37,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (py-autopep8 better-defaults iedit wgrep flycheck elpy))))
+    (org py-autopep8 better-defaults iedit wgrep flycheck elpy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
