@@ -19,6 +19,9 @@
 (when (not package-archive-contents)
     (package-refresh-contents))
 
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
 (defvar myPackages
   '(elpy
     flycheck
@@ -27,9 +30,11 @@
     better-defaults
     py-autopep8
     org
-    ggtags
     helm
-    helm-gtags))
+    helm-gtags
+    helm-projectile
+    function-args
+    sr-speedbar))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)

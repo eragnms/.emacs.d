@@ -18,6 +18,7 @@
   (load-file (expand-file-name file user-init-dir)))
 
 (load-user-file "packages.el")
+(load-user-file "global.el")
 (load-user-file "apperance.el")
 (load-user-file "python.el")
 (load-user-file "keyboard.el")
@@ -32,9 +33,6 @@
 (load-user-file "setup-helm.el")
 (load-user-file "cpp.el")
 
-
-
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -42,7 +40,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm helm-gtags ggtags org py-autopep8 better-defaults iedit wgrep flycheck elpy))))
+    (sr-speedbar use-package function-args helm-projectile helm helm-gtags org py-autopep8 better-defaults iedit wgrep flycheck elpy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

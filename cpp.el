@@ -1,4 +1,8 @@
 ;; https://tuhdo.github.io/c-ide.html
+;; https://github.com/abo-abo/function-args
+
+;; Continue setup at: Source code completion using Clang
+
 (require 'setup-helm)
 
 (setq
@@ -24,3 +28,10 @@
 (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
 (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
 (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+
+;; function args
+(require 'function-args)
+(fa-config-default)
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+
