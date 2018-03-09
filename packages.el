@@ -26,7 +26,10 @@
     iedit
     better-defaults
     py-autopep8
-    org))
+    org
+    ggtags
+    helm
+    helm-gtags))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
