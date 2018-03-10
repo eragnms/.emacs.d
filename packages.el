@@ -4,39 +4,37 @@
 ;; https://stackoverflow.com/questions/14836958/updating-packages-in-emacs
 ;; Later changed to what is described here:
 ;; https://realpython.com/blog/python/emacs-the-best-python-editor/
+;; Later changed to:
+;; https://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'package)
+;; List the packages we want to have installed
+(setq package-list '(use-package
+		     elpy
+                     flycheck
+                     wgrep
+                     iedit
+                     better-defaults
+                     py-autopep8
+                     org
+                     helm
+                     helm-gtags
+                     helm-projectile
+                     function-args
+                     sr-speedbar))
 
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'package-archives
-             '("org" . "http://orgmode.org/elpa/") t)
-(add-to-list 'package-archives
-             '("elpy" . "https://jorgenschaefer.github.io/packages/") t)
+;; List the repositories containing them
+(setq package-archives '(("melpa" . "http://melpa.org/packages/") 
+                         ("org" . "http://orgmode.org/elpa/")
+                         ("elpy" . "https://jorgenschaefer.github.io/packages/")))
 
-;; install any packages in myPackages, if they are not installed already
+;; activate all the packages (in particular autoloads)
 (package-initialize)
-(when (not package-archive-contents)
-    (package-refresh-contents))
 
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
+;; fetch the list of packages available
+(unless package-archive-contents
+  (package-refresh-contents))
 
-(defvar myPackages
-  '(elpy
-    flycheck
-    wgrep
-    iedit
-    better-defaults
-    py-autopep8
-    org
-    helm
-    helm-gtags
-    helm-projectile
-    function-args
-    sr-speedbar))
-
-(mapc #'(lambda (package)
-    (unless (package-installed-p package)
-      (package-install package)))
-      myPackages)
+;; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
