@@ -31,6 +31,7 @@
 (load-user-file "c.el")
 (load-user-file "org.el")
 (load-user-file "setup-helm.el")
+(load-user-file "setup-helm-gtags.el")
 (load-user-file "cpp.el")
 
 

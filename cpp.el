@@ -7,19 +7,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Continue setup at: Source code completion using Clang
-;; ans look through the require section below
-
-(require 'setup-helm)
-;;(require 'setup-helm-gtags))
 
 ;;(require 'setup-general)
 (if (version< emacs-version "24.4")
     (require 'setup-ivy-counsel)
   (require 'setup-helm)
-  ;;(require 'setup-helm-gtags))
+  (require 'setup-helm-gtags))
 ;; (require 'setup-ggtags)
-(require 'setup-cedet)
-(require 'setup-editing)
+;;(require 'setup-cedet)
+;;(require 'setup-editing)
 
 (setq
  helm-gtags-ignore-case t
@@ -49,5 +45,19 @@
 (require 'function-args)
 (fa-config-default)
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+;; company
+(use-package company
+  :init
+  (global-company-mode 1)
+  (delete 'company-semantic company-backends))
+;; (define-key c-mode-map  [(control tab)] 'company-complete)
+;; (define-key c++-mode-map  [(control tab)] 'company-complete)
+
+;; Package: projectile
+(use-package projectile
+  :init
+  (projectile-global-mode)
+  (setq projectile-enable-caching t))
 
 
