@@ -20,12 +20,15 @@
                      helm-gtags
                      helm-projectile
                      function-args
-                     sr-speedbar))
+                     sr-speedbar
+		     magit))
 
 ;; List the repositories containing them
-(setq package-archives '(("melpa" . "http://melpa.org/packages/") 
-                         ("org" . "http://orgmode.org/elpa/")
-                         ("elpy" . "https://jorgenschaefer.github.io/packages/")))
+(require 'package)
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("elpy" . "https://jorgenschaefer.github.io/packages"))
 
 ;; activate all the packages (in particular autoloads)
 (package-initialize)
