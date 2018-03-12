@@ -21,7 +21,8 @@
                      helm-projectile
                      function-args
                      sr-speedbar
-		     magit))
+		     magit
+		     markdown-mode))
 
 ;; List the repositories containing them
 (require 'package)
