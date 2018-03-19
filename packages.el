@@ -22,7 +22,10 @@
                      function-args
                      sr-speedbar
 		     magit
-		     markdown-mode))
+		     markdown-mode
+		     company-c-headers
+		     srefactor
+		     smartparens))
 
 ;; List the repositories containing them
 (require 'package)
