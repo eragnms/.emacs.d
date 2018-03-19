@@ -25,10 +25,7 @@
 		     markdown-mode
 		     company-c-headers
 		     srefactor
-		     smartparens
-		     ag
-		     wgrep-ag
-		     multiple-cursors))
+		     smartparens))
 
 ;; List the repositories containing them
 (require 'package)
