@@ -61,12 +61,12 @@
   (setq projectile-enable-caching t))
 
 ;; Use company-mode with Clang
-(setq company-backends (delete 'company-semantic company-backends))
-(define-key c-mode-map  [(tab)] 'company-complete)
-(define-key c++-mode-map  [(tab)] 'company-complete)
+;(setq company-backends (delete 'company-semantic company-backends))
+;(define-key c-mode-map  [(tab)] 'company-complete)
+;(define-key c++-mode-map  [(tab)] 'company-complete)
 
 ;; Header file completion
-(add-to-list 'company-backends 'company-c-headers)
+;(add-to-list 'company-backends 'company-c-headers)
 
 ;; Semantic
 (require 'cc-mode)
@@ -82,8 +82,8 @@
 ;; OPTIONAL: ADD IT ONLY IF YOU USE C/C++. 
 (semantic-mode 1) ;; -> this is optional for Lisp
    
-(define-key c-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)
-(define-key c++-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)
+;(define-key c-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)
+;(define-key c++-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)
 (global-set-key (kbd "M-RET o") 'srefactor-lisp-one-line)
 (global-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
 (global-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
@@ -103,3 +103,22 @@
   (sp-local-pair "{" nil :post-handlers '(("||\n[i]" "RET")))
   (sp-local-pair "/*" "*/" :post-handlers '((" | " "SPC")
                                             ("* ||\n[i]" "RET"))))
+
+;; Compile
+(defun compile-parent (command)
+  (interactive
+   (let* ((make-directory (locate-dominating-file (buffer-file-name)
+                                                  "Makefile"))
+          (command (concat "make -k -C "
+                           (shell-quote-argument make-directory))))
+     (list (compilation-read-command command))))
+  (compile command))
+
+;; Debug
+(setq
+ ;; use gdb-many-windows by default
+ gdb-many-windows t
+
+ ;; Non-nil means display source file containing the main routine at startup
+ gdb-show-main t
+)
