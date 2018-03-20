@@ -33,6 +33,9 @@
  '(package-selected-packages
    (quote
     (smartparens smartparens-config srefactor company-c-headers magit wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults)))
+ '(safe-local-variable-values
+   (quote
+    ((company-clang-arguments "-I/home/mats/gitdev/cellscan-tabor-wcdma/wcdma_scanner/include/" "-I/home/mats/gitdev/cellscan-tabor-wcdma/example/include"))))
  '(semantic-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

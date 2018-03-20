@@ -20,8 +20,6 @@
 (global-set-key (kbd "C-o") 'newline-without-break-of-line)
 
 ;; Goto beginning and end of line
-;(global-set-key (kbd "C-e") (lambda () (interactive)(beginning-of-line)))
-;(global-set-key (kbd "M-E") (lambda () (interactive)(end-of-line)))
 (bind-key "C-c q" 'beginning-of-line)
 (bind-key "C-c e" 'end-of-line)
 
@@ -36,3 +34,6 @@
 
 ;; Turn autoindenting on
 (global-set-key "\r" 'newline-and-indent)
+
+;; Scroll up
+(bind-key "C-c v" 'scroll-down-command)
