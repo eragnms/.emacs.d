@@ -25,7 +25,9 @@
 		             markdown-mode
 		             company-c-headers
 		             srefactor
-		             smartparens))
+		             smartparens
+                     free-keys
+                     bind-key))
 
 ;; List the repositories containing them
 (require 'package)
