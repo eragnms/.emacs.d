@@ -4,19 +4,14 @@
 ;; You may delete these explanatory comments.
 ;(package-initialize)
 
-(defconst user-init-dir
-  (cond ((boundp 'user-emacs-directory)
-         user-emacs-directory)
-        ((boundp 'user-init-directory)
-         user-init-directory)
-        (t "~/.emacs.d/")))
+(defconst user-init-dir  "~/.emacs.d/custom/")
 
 (defun load-user-file (file)
   (interactive "f")
   "Load a file in current user's configuration directory"
   (load-file (expand-file-name file user-init-dir)))
 
-;(load-user-file "packages.el")
+(load-user-file "packages.el")
 ;(load-user-file "global.el")
 ;(load-user-file "apperance.el")
 ;(load-user-file "python.el")
