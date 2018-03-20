@@ -61,12 +61,12 @@
   (setq projectile-enable-caching t))
 
 ;; Use company-mode with Clang
-;(setq company-backends (delete 'company-semantic company-backends))
-;(define-key c-mode-map  [(tab)] 'company-complete)
-;(define-key c++-mode-map  [(tab)] 'company-complete)
+(setq company-backends (delete 'company-semantic company-backends))
+(define-key c-mode-map  [(tab)] 'company-complete)
+(define-key c++-mode-map  [(tab)] 'company-complete)
 
 ;; Header file completion
-;(add-to-list 'company-backends 'company-c-headers)
+(add-to-list 'company-backends 'company-c-headers)
 
 ;; Semantic
 (require 'cc-mode)
