@@ -61,7 +61,7 @@
           ;; ido-use-virtual-buffers t
           helm-semantic-fuzzy-match t
           helm-M-x-fuzzy-match t
-	   helm-imenu-fuzzy-match t
+          helm-imenu-fuzzy-match t
           helm-lisp-fuzzy-completion t
           ;; helm-apropos-fuzzy-match t
           helm-buffer-skip-remote-checking t
@@ -118,7 +118,7 @@
 
       ;; From helm-swoop to helm-multi-swoop-all
       (define-key helm-swoop-map (kbd "M-i") 'helm-multi-swoop-all-from-helm-swoop)
-      
+
       ;; Save buffer when helm-multi-swoop-edit complete
       (setq helm-multi-swoop-edit-save t)
 

@@ -1,7 +1,1 @@
-# emacs.d
-
-## Installation
-> cd
-> rm .emacs
-> mv .emacs.d .emacs.d_bkp
-> git clone https://github.com/eragnms/.emacs.d
+Emacs demo setup for C/C++ described here: http://tuhdo.github.io/c-ide.html
