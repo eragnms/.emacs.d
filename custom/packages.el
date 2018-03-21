@@ -27,7 +27,13 @@
 		             srefactor
 		             smartparens
                      free-keys
-                     bind-key))
+                     bind-key
+                     volatile-highlights
+                     undo-tree
+                     clean-aindent-mode
+                     dtrt-indent
+                     ws-butler
+                     anzu))
 
 ;; List the repositories containing them
 (require 'package)
