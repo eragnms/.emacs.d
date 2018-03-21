@@ -16,16 +16,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; My additions to Tuhdo
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Compile: compile-parent lets you compile at a folder level of choice
-(defun compile-parent (command)
-  (interactive
-   (let* ((make-directory (locate-dominating-file (buffer-file-name)
-                                                  "Makefile"))
-          (command (concat "make -k -C "
-                           (shell-quote-argument make-directory))))
-     (list (compilation-read-command command))))
-  (compile command))
-
 ;; srefactor for small scale refactoring
 (require 'srefactor)
 (require 'srefactor-lisp)
