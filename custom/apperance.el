@@ -38,7 +38,7 @@
 
 ;; Mark too long lines
 (global-whitespace-mode +1)
-(setq whitespace-line-column 80) ;; limit line length
+(setq whitespace-line-column 78) ;; limit line length
 (setq whitespace-style '(face lines-tail))
 
 ;; rgrep will fail if fish shell is used
