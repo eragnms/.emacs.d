@@ -35,3 +35,8 @@
 ;                    :width 'normal)
 (add-to-list 'default-frame-alist
              '(font . "DejaVu Sans Mono-10"))
+
+;; Mark too long lines
+(global-whitespace-mode +1)
+(setq whitespace-line-column 80) ;; limit line length
+(setq whitespace-style '(face lines-tail))
