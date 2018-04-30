@@ -33,7 +33,8 @@
                      clean-aindent-mode
                      dtrt-indent
                      ws-butler
-                     anzu))
+                     anzu
+                     auto-package-update))
 
 ;; List the repositories containing them
 (require 'package)
