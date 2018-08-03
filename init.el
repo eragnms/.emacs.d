@@ -22,8 +22,8 @@
 (load-user-file "perl.el")
 (load-user-file "gnu_plot.el")
 (load-user-file "octave.el")
-(load-user-file "org.el")
 (load-user-file "cpp.el")
+(load-user-file "org.el")
 (load-user-file "magit.el")
 
 (custom-set-variables

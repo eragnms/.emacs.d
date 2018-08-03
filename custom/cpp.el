@@ -29,3 +29,5 @@
 (global-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
 (global-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
 (global-set-key (kbd "M-RET b") 'srefactor-lisp-format-buffer)
+;; Always start smartparens mode in c++-mode.
+(add-hook 'c++-mode-hook #'smartparens-mode)
