@@ -19,6 +19,7 @@
                      helm
                      helm-gtags
                      helm-projectile
+                     projectile
                      function-args
                      sr-speedbar
 		             magit
