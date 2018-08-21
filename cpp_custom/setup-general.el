@@ -41,9 +41,19 @@
 ;; (define-key c++-mode-map  [(control tab)] 'company-complete)
 
 ;; Package: projectile
+;; https://projectile.readthedocs.io/en/latest/configuration/
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+;; flx-ido
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
 
 ;; Package zygospore
 (use-package zygospore
