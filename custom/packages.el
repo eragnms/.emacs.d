@@ -36,7 +36,8 @@
                      ws-butler
                      anzu
                      auto-package-update
-                     flx-ido))
+                     flx-ido
+                     which-key))
 
 ;; List the repositories containing them
 (require 'package)
