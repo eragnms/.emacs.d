@@ -35,9 +35,7 @@
                      dtrt-indent
                      ws-butler
                      anzu
-                     auto-package-update
-                     flx-ido
-                     which-key))
+                     auto-package-update))
 
 ;; List the repositories containing them
 (require 'package)

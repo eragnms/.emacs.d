@@ -43,37 +43,3 @@
 
 ;; rgrep will fail if fish shell is used
 (setq shell-file-name "/bin/sh")
-
-;; Increase the cache before starting garbage collection:
-(setq gc-cons-threshold 50000000)
-
-;; Remove the warnings from the GnuTLS library when using HTTPS…
-;; increase the minimum prime bits size:
-(setq gnutls-min-prime-bits 4096)
-
-;; Fix the scrolling to keep point in the center:
-(setq scroll-conservatively 10000
-      scroll-preserve-screen-position t)
-
-;; Get rid of the beeps
-(setq visible-bell t)
-
-;; Toolbars were only cool with XEmacs
-;; Scrollbars are waste screen estate
-(when (window-system)
-  (tool-bar-mode 0)
-  (when (fboundp 'horizontal-scroll-bar-mode)
-    (horizontal-scroll-bar-mode -1))
-  (scroll-bar-mode -1))
-
-;; Always, and I do mean always strip all trailing whitespace from the file.
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-;; Save the point position for every file, and restore it when that file is
-;; reloaded.
-(use-package saveplace
-  :init
-  (setq-default save-place t)
-  (setq save-place-forget-unreadable-files t
-        save-place-skip-check-regexp
-        "\\`/\\(?:cdrom\\|floppy\\|mnt\\|/[0-9]\\|\\(?:[^@/:]*@\\)?[^@/:]*[^@/:.]:\\)"))
