@@ -25,6 +25,7 @@
 (load-user-file "cpp.el")
 (load-user-file "org.el")
 (load-user-file "magit.el")
+(load-user-file "multi_scratch.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
