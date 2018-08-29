@@ -17,4 +17,9 @@ Assuming emacs is installed, do:
 - In the root of your project run:
 
     $ gtags
+    
+## TODO ##
+
+- Investigate why Emacs is slow:
+  https://www.reddit.com/r/emacs/comments/4cqy6s/emacs_very_slow_browsing_big_files/
 
