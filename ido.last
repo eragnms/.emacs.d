@@ -1,0 +1,30 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/" . "src/")
+ ("/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/" . "lte_scanner/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/src/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "CellSearch.cpp"
+ "process_data.cpp"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/src/" (23441 33458 220063 40000) "process_data.cpp" "common.o" "constants.o" "itpp_ext.o" "CellSearch" "process_data.o" "libls.a" "ls_result.o" "searcher.o" "lte_lib.o" "CellSearch.o" "capbuf.o" "save_data_arma.o" "fetch_data_file_arma.o" "fetch_data_bladerf_x40.o" "fetch_data.o" "iq_data.o" "libls.o" "capture_data.o" "config_params.o" "Makefile" "Makefile.in" "searcher.cpp" "ls_result.cpp" "libls.cpp" "capture_data.cpp" "Makefile.am" "CellSearch.cpp" "save_data_arma.cpp" "lte_lib.cpp" "iq_data.cpp" "fetch_data_file_arma.cpp" "fetch_data_bladerf_x40.cpp" "fetch_data.cpp" ".libs/" ".deps/" "itpp_ext.cpp" "config_params.cpp" "common.cpp" "capbuf.cpp" "constants.cpp" ".dirstamp" "../" "./")
+
+ ("/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/" (23441 30571 942049 247000) "stamp-h1" "libtool" "Makefile" "Makefile.in" "aclocal.m4" "configure.ac" "Makefile.am" ".gitignore" "config.h" "config.status" "config.log" "lib_cellscan_tools/" "example/" "depcomp" "missing" "install-sh" "compile" "config.h.in" "configure" "m4/" "ltmain.sh" "autom4te.cache/" "GRTAGS" "GPATH" "GTAGS" "test/" "test-driver" "lte_scanner/" "doc/" "config.sub" "config.guess" "asn1_test/" "TODO" "COPYING" "AUTHORS" ".dir-locals.e" ".git/" "../" "./")
+
+ ("/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/" (23441 30481 387253 640000) "Makefile" "Makefile.in" "doc/" "README.md" "Makefile.am" "LICENSE" "tests/" "src/" "include/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
