@@ -14,6 +14,7 @@ Assuming emacs is installed, do:
 
 - In the root of your project create a file .dir-local.el
 - Install GNU globals
+- Install clang (On Arch Linux: # pacman -S clang)
 - In the root of your project run:
 
     $ gtags

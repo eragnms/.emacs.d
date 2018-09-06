@@ -35,7 +35,8 @@
                      dtrt-indent
                      ws-butler
                      anzu
-                     auto-package-update))
+                     auto-package-update
+		     company))
 
 ;; List the repositories containing them
 (require 'package)
