@@ -1,3 +1,7 @@
+;; Based on:
+;; https://tuhdo.github.io/c-ide.html
+;; https://github.com/howardabrams/dot-files/blob/master/emacs.org
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -26,6 +30,8 @@
 (load-user-file "org.el")
 (load-user-file "magit.el")
 (load-user-file "multi_scratch.el")
+(load-user-file "encrypt_files.el")
+(load-user-file "disp_command_settings.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -1,0 +1,134 @@
+diff --git a/custom/apperance.el b/custom/apperance.el
+index e68bc10..d725431 100644
+--- a/custom/apperance.el
++++ b/custom/apperance.el
+@@ -43,3 +43,37 @@
+ 
+ ;; rgrep will fail if fish shell is used
+ (setq shell-file-name "/bin/sh")
++
++;; Increase the cache before starting garbage collection:
++(setq gc-cons-threshold 50000000)
++
++;; Remove the warnings from the GnuTLS library when using HTTPS…
++;; increase the minimum prime bits size:
++(setq gnutls-min-prime-bits 4096)
++
++;; Fix the scrolling to keep point in the center:
++(setq scroll-conservatively 10000
++      scroll-preserve-screen-position t)
++
++;; Get rid of the beeps
++(setq visible-bell t)
++
++;; Toolbars were only cool with XEmacs
++;; Scrollbars are waste screen estate
++(when (window-system)
++  (tool-bar-mode 0)
++  (when (fboundp 'horizontal-scroll-bar-mode)
++    (horizontal-scroll-bar-mode -1))
++  (scroll-bar-mode -1))
++
++;; Always, and I do mean always strip all trailing whitespace from the file.
++(add-hook 'before-save-hook 'delete-trailing-whitespace)
++
++;; Save the point position for every file, and restore it when that file is
++;; reloaded.
++(use-package saveplace
++  :init
++  (setq-default save-place t)
++  (setq save-place-forget-unreadable-files t
++        save-place-skip-check-regexp
++        "\\`/\\(?:cdrom\\|floppy\\|mnt\\|/[0-9]\\|\\(?:[^@/:]*@\\)?[^@/:]*[^@/:.]:\\)"))
+diff --git a/custom/bookmarks.el b/custom/bookmarks.el
+new file mode 100644
+index 0000000..d6dc3d9
+--- /dev/null
++++ b/custom/bookmarks.el
+@@ -0,0 +1,25 @@
++;; For me, bookmarks serve two functions. First, as a way to jump back to
++;; interesting places by name (and annotate those places), and second, as form
++;; of bread crumbs while I’m toiling around a large codebase.
++;; For normal bookmarks, I’d rather use Helm:
++(use-package bookmark
++  :init (setq bookmark-save-flag 1)
++  :config
++  (defun ha/add-bookmark (name)
++    (interactive
++     (list (let* ((filename  (file-name-base (buffer-file-name)))
++                  (project   (projectile-project-name))
++                  (func-name (which-function))
++                  (initial   (format "%s::%s:%s " project filename func-name)))
++             (read-string "Bookmark: " initial))))
++    (bookmark-set name))
++  :bind  (("C-c b m" . ha/add-bookmark)
++          ("C-x r m" . ha/add-bookmark)
++          ("C-x r b" . helm-bookmarks)))
++
++;; Visual Bookmarks… Breadcrumbs
++;; For dropping visual breadcrumbs throughout a single file or multiple files,
++;; use my better-breadcrumbs mode.
++ (require 'better-breadcrumbs)
++ (load-library "better-breadcrumbs")
++(better-breadcrumbs-mode +1)
+diff --git a/custom/disp_command_settings.el b/custom/disp_command_settings.el
+new file mode 100644
+index 0000000..736ca39
+--- /dev/null
++++ b/custom/disp_command_settings.el
+@@ -0,0 +1,55 @@
++;; Many command sequences may be logical, but who can remember them all?
++;; While I used to use guide-key to display the final function name, it isn’t
++;; as nice as which-key.
++
++(use-package which-key
++  :ensure t
++  :defer 10
++  :diminish which-key-mode
++  :config
++
++  ;; Replacements for how KEY is replaced when which-key displays
++  ;;   KEY → FUNCTION
++  ;; Eg: After "C-c", display "right → winner-redo" as "▶ → winner-redo"
++  (setq which-key-key-replacement-alist
++        '(("<\\([[:alnum:]-]+\\)>" . "\\1")
++          ("left"                  . "◀")
++          ("right"                 . "▶")
++          ("up"                    . "▲")
++          ("down"                  . "▼")
++          ("delete"                . "DEL") ; delete key
++          ("\\`DEL\\'"             . "BS") ; backspace key
++          ("next"                  . "PgDn")
++          ("prior"                 . "PgUp"))
++
++        ;; List of "special" keys for which a KEY is displayed as just
++        ;; K but with "inverted video" face... not sure I like this.
++        which-key-special-keys '("RET" "DEL" ; delete key
++                                 "ESC" "BS" ; backspace key
++                                 "SPC" "TAB")
++
++        ;; Replacements for how part or whole of FUNCTION is replaced:
++        which-key-description-replacement-alist
++        '(("Prefix Command" . "prefix")
++          ("\\`calc-"       . "") ; Hide "calc-" prefixes when listing M-x calc keys
++          ("\\`projectile-" . "𝓟/")
++          ("\\`org-babel-"  . "ob/"))
++
++        ;; Underlines commands to emphasize some functions:
++        which-key-highlighted-command-list
++        '("\\(rectangle-\\)\\|\\(-rectangle\\)"
++          "\\`org-"))
++
++  ;; Change what string to display for a given *complete* key binding
++  ;; Eg: After "C-x", display "8 → +unicode" instead of "8 → +prefix"
++  (which-key-add-key-based-replacements
++    "C-x 8"   "unicode"
++    "C-c T"   "toggles-"
++    "C-c p s" "projectile-search"
++    "C-c p 4" "projectile-other-buffer-"
++    "C-x a"   "abbrev/expand"
++    "C-x r"   "rect/reg"
++    "C-c /"   "engine-mode-map"
++    "C-c C-v" "org-babel")
++
++  (which-key-mode 1))

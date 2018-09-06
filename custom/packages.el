@@ -37,7 +37,8 @@
                      anzu
                      flx-ido
                      auto-package-update
-		     company))
+		             company
+                     which-key))
 
 ;; List the repositories containing them
 (require 'package)
