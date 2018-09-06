@@ -35,6 +35,7 @@
                      dtrt-indent
                      ws-butler
                      anzu
+                     flx-ido
                      auto-package-update
 		     company))
 
