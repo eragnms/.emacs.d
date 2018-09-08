@@ -15,7 +15,7 @@
 
 ;; Window size and start position
 (when (string= system-name "vmanjaro")
-  (when window-system 
+  (when window-system
     (set-frame-position (selected-frame) 0 0)
     (set-frame-size (selected-frame) 107 54)))
 
@@ -77,3 +77,14 @@
   (setq save-place-forget-unreadable-files t
         save-place-skip-check-regexp
         "\\`/\\(?:cdrom\\|floppy\\|mnt\\|/[0-9]\\|\\(?:[^@/:]*@\\)?[^@/:]*[^@/:.]:\\)"))
+
+
+;; Eshell
+;; The smart display can also be set not to use this extended “edit mode” if
+;; the command returns successfully, and without displaying output, like chown
+;; for instance.
+(require 'eshell)
+(require 'em-smart)
+(setq eshell-where-to-jump 'begin)
+(setq eshell-review-quick-commands nil)
+(setq eshell-smart-space-goes-to-end t)
