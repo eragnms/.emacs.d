@@ -19,7 +19,6 @@
 (load-user-file "auto_update.el")
 (load-user-file "apperance.el")
 (load-user-file "python.el")
-(load-user-file "keyboard.el")
 (load-user-file "markdown.el")
 (load-user-file "restructured.el")
 (load-user-file "latex.el")
@@ -32,6 +31,7 @@
 (load-user-file "multi_scratch.el")
 (load-user-file "encrypt_files.el")
 (load-user-file "disp_command_settings.el")
+(load-user-file "keyboard.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -43,7 +43,10 @@
     (projectile smartparens smartparens-config srefactor company-c-headers magit wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults)))
  '(safe-local-variable-values
    (quote
-    ((company-clang-arguments "-I/home/mats/gitdev/cellscan-tabor-wcdma/wcdma_scanner/include/" "-I/home/mats/gitdev/cellscan-tabor-wcdma/example/include"))))
+    ((company-clang-arguments "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lib_cellscan_tools/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/")
+     (company-clang-arguments "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lib_cellscan_tools/include/")
+     (company-clang-arguments "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/include/")
+     (company-clang-arguments "-I/home/mats/gitdev/cellscan-tabor-wcdma/wcdma_scanner/include/" "-I/home/mats/gitdev/cellscan-tabor-wcdma/example/include"))))
  '(semantic-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

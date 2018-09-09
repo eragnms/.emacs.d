@@ -13,7 +13,7 @@
 (require 'setup-cedet)
 (require 'setup-editing)
 (require 'setup-c)
-(require 'company-setup)
+(require 'setup-company)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;

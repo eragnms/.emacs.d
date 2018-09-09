@@ -1,3 +1,5 @@
+;; This is for my preferred key bindings.
+
 ;; free-keys package, gives a function of the same name that shows you all your currently unused key-bindings.
 ;; bind-key gives a cleaner syntax for defining your own bindings, i.e.:
 ;; (bind-key "C-h C-k" 'free-keys)
@@ -38,3 +40,9 @@
 ;; Scroll up
 (bind-key "C-c v" 'scroll-down-command)
 
+;; With this setting the TAB key will first try to re-indent the current line.
+;; If the line is already indented properly it will call completion-at-point
+;; instead. You can customize the variable completion-styles to tune how the
+;; built-in completion behaves.
+;; For some reason the complete stuff does not work...
+(setq tab-always-indent 'complete)
