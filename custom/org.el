@@ -23,4 +23,4 @@
 
 ;; Those are the files from which org will build an agenda
 (setq org-agenda-files (list "~/nextcloud/org/personal.org"
-                             "~/nextcloud/org/orgtutorial.org"))
+                             "~/nextcloud/org/inbox.org"))
