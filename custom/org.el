@@ -20,3 +20,7 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+;; Those are the files from which org will build an agenda
+(setq org-agenda-files (list "~/nextcloud/org/personal.org"
+                             "~/nextcloud/org/orgtutorial.org"))
