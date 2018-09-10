@@ -21,6 +21,8 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-;; Those are the files from which org will build an agenda
-(setq org-agenda-files (list "~/nextcloud/org/personal.org"
-                             "~/nextcloud/org/inbox.org"))
+(setq org-default-notes-file "~/nextcloud/org/inbox.org")
+
+;; Those are the files from which org will build the agenda
+(add-to-list 'load-path "~/nextcloud/org/agenda")
+(require 'setup-org-agenda-list)
