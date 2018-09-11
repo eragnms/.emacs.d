@@ -33,3 +33,15 @@
 
 ;; Toggle hide block
 (bind-key "C-c h" 'hs-toggle-hiding)
+
+;; Mark too long lines
+(require 'whitespace)
+
+(add-hook 'c-mode-hook
+          (function (lambda ()
+                      (whitespace-mode t))))
+(add-hook 'c++-mode-hook
+          (function (lambda ()
+                      (whitespace-mode t))))
+(setq whitespace-line-column 78) ;; limit line length
+(setq whitespace-style '(face lines-tail))

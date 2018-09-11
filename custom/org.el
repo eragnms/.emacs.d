@@ -2,6 +2,21 @@
 ;; Customize: https://orgmode.org/worg/org-configs/org-customization-guide.html
 (add-hook 'org-mode-hook 'turn-on-font-lock)
 
+;; Spell checking
+(add-hook 'org-mode-hook 'flyspell-mode)
+(setq flyspell-issue-message-flag nil)
+(setq ispell-program-name "aspell")
+(setq ispell-list-command "--list")
+(let ((langs '("english" "svenska")))
+  (setq lang-ring (make-ring (length langs)))
+  (dolist (elem langs) (ring-insert lang-ring elem)))
+(defun cycle-ispell-languages ()
+  (interactive)
+  (let ((lang (ring-ref lang-ring -1)))
+    (ring-insert lang-ring lang)
+    (ispell-change-dictionary lang)))
+(global-set-key [f6] 'cycle-ispell-languages)
+
 ;; Files to run in org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
@@ -36,3 +51,4 @@
 ;; Apperance
 (setq org-hide-leading-stars 1)
 (setq org-return-follows-link 1)
+(setq org-startup-truncated nil)
