@@ -1,5 +1,9 @@
 ;; https://orgmode.org
+;; Customize: https://orgmode.org/worg/org-configs/org-customization-guide.html
 (add-hook 'org-mode-hook 'turn-on-font-lock)
+
+;; Files to run in org mode
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 ;; Save the clock history across Emacs sessions
 (setq org-clock-persist 'history)
@@ -21,8 +25,14 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+;; Some default files and folders
 (setq org-default-notes-file "~/nextcloud/org/inbox.org")
+(setq org-directory "~/nextcloud/org/")
 
 ;; Those are the files from which org will build the agenda
 (add-to-list 'load-path "~/nextcloud/org/agenda")
 (require 'setup-org-agenda-list)
+
+;; Apperance
+(setq org-hide-leading-stars 1)
+(setq org-return-follows-link 1)
