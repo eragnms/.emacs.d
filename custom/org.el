@@ -52,3 +52,11 @@
 (setq org-hide-leading-stars 1)
 (setq org-return-follows-link 1)
 (setq org-startup-truncated nil)
+
+;; Convert the current buffer's content using pandoc from markdown to orgmode
+;; format and save it with the current buffer's file name but with .org extension."
+(defun markdown-convert-buffer-to-org ()
+  (interactive)
+  (shell-command-on-region (point-min) (point-max)
+                           (format "pandoc -f markdown -t org -o %s"
+                                   (concat (file-name-sans-extension (buffer-file-name)) ".org"))))
