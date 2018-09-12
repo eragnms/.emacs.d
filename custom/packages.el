@@ -38,7 +38,8 @@
                      flx-ido
                      auto-package-update
 		             company
-                     which-key))
+                     which-key
+                     org-bullets))
 
 ;; List the repositories containing them
 (require 'package)

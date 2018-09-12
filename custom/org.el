@@ -29,7 +29,11 @@
 
 ;; TODO workflow states
 (setq org-todo-keywords
-      '((sequence "TODO" "ONGOING" "|" "DONE")))
+      '((sequence "☛ TODO(t)" "⚑ ONGOING(o)" "|" "✔ DONE(d)")))
+;;(setq org-todo-keywords '((sequence "☛ TODO(t)" "|" "✔ DONE(d)")
+;;(sequence "⚑ WAITIN(w)" "|")
+;;(sequence "|" "✘ CANCELED(c)")))
+
 
 ;; Note the time when a TODO was closed
 (setq org-log-done 'time)
@@ -52,6 +56,14 @@
 (setq org-hide-leading-stars 1)
 (setq org-return-follows-link 1)
 (setq org-startup-truncated nil)
+;; Nice bullets
+(use-package org-bullets
+  :ensure t
+  :init
+  (setq org-bullets-bullet-list
+        '("◉" "◎" "⚫" "○" "►" "◇"))
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 ;; Convert the current buffer's content using pandoc from markdown to orgmode
 ;; format and save it with the current buffer's file name but with .org extension."
