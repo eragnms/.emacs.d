@@ -29,10 +29,9 @@
 
 ;; TODO workflow states
 (setq org-todo-keywords
-      '((sequence "☛ TODO(t)" "⚑ ONGOING(o)" "|" "✔ DONE(d)")))
-;;(setq org-todo-keywords '((sequence "☛ TODO(t)" "|" "✔ DONE(d)")
-;;(sequence "⚑ WAITIN(w)" "|")
-;;(sequence "|" "✘ CANCELED(c)")))
+      '((sequence "TODO(t)" "ONGOING(o)" "|" "DONE(d)")))
+;;(setq org-todo-keywords
+;;      '((sequence "☛ TODO(t)" "⚑ ONGOING(o)" "|" "✔ DONE(d)")))
 
 
 ;; Note the time when a TODO was closed
