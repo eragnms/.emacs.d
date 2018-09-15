@@ -71,3 +71,16 @@
   (shell-command-on-region (point-min) (point-max)
                            (format "pandoc -f markdown -t org -o %s"
                                    (concat (file-name-sans-extension (buffer-file-name)) ".org"))))
+
+;; Default values for todos
+(setq org-capture-templates
+      '(("t" "todo" entry (file+headline "~/nextcloud/org/inbox.org" "Tasks")
+         "* TODO %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n")))
+
+;; Ageda sorting strategy of todos
+(setq org-agenda-sorting-strategy
+      (quote
+       ((agenda deadline-up priority-down)
+        (todo priority-down category-keep)
+        (tags priority-down category-keep)
+        (search category-keep))))
