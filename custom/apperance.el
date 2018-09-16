@@ -5,10 +5,10 @@
 (global-linum-mode t)
 (if (display-graphic-p)
     (progn
-    ;; if graphic
+      ;; if graphic
       ())
-      (setq linum-format "%4d \u2502 ")) ; vertical bar
-;;(setq linum-format "%d ") ; just a space
+  ;;(setq linum-format "%4d \u2502 ")) ; vertical bar
+  (setq linum-format "%d ")) ; just a space
 
 ;; Display also the column number
 (setq column-number-mode t)
