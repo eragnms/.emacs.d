@@ -42,7 +42,9 @@
                      org-bullets
                      ghub
                      magit-p4
-                     treepy))
+                     treepy
+                     graphql
+                     zygospore))
 
 ;; List the repositories containing them
 (require 'package)
