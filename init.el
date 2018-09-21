@@ -8,6 +8,14 @@
 ;; You may delete these explanatory comments.
 ;(package-initialize)
 
+;; Show the messages buffer at startup
+;; In a split screen:
+(view-echo-area-messages)
+;; In the whole buffer:
+;;(with-current-buffer (messages-buffer)
+;;  (goto-char (point-max))
+;;  (switch-to-buffer (current-buffer)))
+
 (defconst user-init-dir  "~/.emacs.d/custom/")
 
 (defun load-user-file (file)
