@@ -84,3 +84,6 @@
         (todo priority-down category-keep)
         (tags priority-down category-keep)
         (search category-keep))))
+
+;; Agenda start week on Monday
+(setq org-agenda-start-on-weekday 1)
