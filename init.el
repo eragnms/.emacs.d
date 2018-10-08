@@ -51,7 +51,8 @@
     (graphql magit magit-p4 org-bullets projectile smartparens smartparens-config srefactor company-c-headers wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults)))
  '(safe-local-variable-values
    (quote
-    ((company-clang-arguments "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lib_cellscan_tools/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/")
+    ((projectile-project-compilation-cmd . "make -C build -j2")
+     (company-clang-arguments "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lib_cellscan_tools/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/")
      (company-clang-arguments "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lib_cellscan_tools/include/")
      (company-clang-arguments "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/include/")
      (company-clang-arguments "-I/home/mats/gitdev/cellscan-tabor-wcdma/wcdma_scanner/include/" "-I/home/mats/gitdev/cellscan-tabor-wcdma/example/include"))))
