@@ -92,3 +92,7 @@
 (prefer-coding-system 'utf-8)
 (when (display-graphic-p)
   (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING)))
+
+;; Undo tree customizations
+(setq undo-tree-visualizer-diff t)
+(setq undo-tree-visualizer-timestamps t)
