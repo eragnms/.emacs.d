@@ -40,6 +40,7 @@
 (load-user-file "encrypt_files.el")
 (load-user-file "disp_command_settings.el")
 (load-user-file "keyboard.el")
+(load-user-file "tramp.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
