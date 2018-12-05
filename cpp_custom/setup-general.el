@@ -40,8 +40,10 @@
 
 ;; flx-ido
 (require 'flx-ido)
-(ido-mode 1)
-(ido-everywhere 1)
+;; IDO is not compatible with helm, so to get rid of warnings on helm disabling
+;; IDO I commented out the IDO start in the two lines below.
+;(ido-mode 1)
+;(ido-everywhere 1)
 (flx-ido-mode 1)
 ;; disable ido faces to see flx highlights.
 (setq ido-enable-flex-matching t)
