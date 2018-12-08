@@ -32,12 +32,6 @@
  gdb-show-main t
  )
 
-;; Package: projectile
-;; https://projectile.readthedocs.io/en/latest/configuration/
-(projectile-mode +1)
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-
 ;; flx-ido
 (require 'flx-ido)
 ;; IDO is not compatible with helm, so to get rid of warnings on helm disabling
@@ -59,8 +53,5 @@
 ;; activate whitespace-mode to view all whitespace characters
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (windmove-default-keybindings)
-
-
-
 
 (provide 'setup-general)

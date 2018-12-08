@@ -5,6 +5,7 @@
 (add-to-list 'load-path "~/.emacs.d/cpp_custom")
 
 (require 'setup-general)
+(require 'setup-projectile)
 (if (version< emacs-version "24.4")
     (require 'setup-ivy-counsel)
     (require 'setup-helm)
