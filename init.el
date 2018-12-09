@@ -49,7 +49,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (graphql magit magit-p4 org-bullets projectile smartparens smartparens-config srefactor company-c-headers wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults)))
+    (volatile-highlights graphql magit magit-p4 org-bullets smartparens smartparens-config srefactor company-c-headers wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults)))
  '(safe-local-variable-values
    (quote
     ((projectile-project-compilation-cmd . "make -C build -j2")
