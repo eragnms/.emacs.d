@@ -46,3 +46,19 @@
 ;; built-in completion behaves.
 ;; For some reason the complete stuff does not work...
 (setq tab-always-indent 'complete)
+
+;; Insert today's date in a document
+;; ‘C-c d’: 2004-04-13
+;; ‘C-u C-c d’: 13.04.2004
+;; ‘C-u C-u C-c d’: tisdag, 13. april 2004
+(global-set-key (kbd "C-c d") 'insert-date)
+(defun insert-date (prefix)
+    "Insert the current date. With prefix-argument, use ISO format. With
+   two prefix arguments, write out the day and month name."
+    (interactive "P")
+    (let ((format (cond
+                   ((not prefix) "%Y-%m-%d")
+                   ((equal prefix '(4)) "%d.%m.%Y")
+                   ((equal prefix '(16)) "%A, %d. %B %Y")))
+          (system-time-locale "se_SE"))
+      (insert (format-time-string format))))

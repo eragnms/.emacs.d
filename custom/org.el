@@ -29,7 +29,7 @@
 
 ;; TODO workflow states
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "ONGOING(o)" "|" "DONE(d)")))
+      '((sequence "TODO(t)" "RFQ(r)" "QUOTED(q)" "ORDERED(o)" "|" "DONE(d)")))
 ;;(setq org-todo-keywords
 ;;      '((sequence "☛ TODO(t)" "⚑ ONGOING(o)" "|" "✔ DONE(d)")))
 
@@ -75,7 +75,10 @@
 ;; Default values for todos
 (setq org-capture-templates
       '(("t" "todo" entry (file+headline "~/nextcloud/org/inbox.org" "Tasks")
-         "* TODO %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n")))
+         "* TODO %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n")
+        ("f" "foocrm" entry (file+headline "~/nextcloud/org/foocrm.org" "Open Cases")
+         "* RFQ %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n** Heading: \n** Customer: \n** Customer location: \n** Contact person: \n** Supplier quote: \n** Customer order: \n** MCN order: \n** MCN PO: \n** Supplier OA: \n** Supplier delivery date: \n** MCN delivery date: \n** Actions: \n"))
+      )
 
 ;; Ageda sorting strategy of todos
 (setq org-agenda-sorting-strategy
