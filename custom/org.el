@@ -77,7 +77,7 @@
       '(("t" "todo" entry (file+headline "~/nextcloud/org/inbox.org" "Tasks")
          "* TODO %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n")
         ("f" "foocrm" entry (file+headline "~/nextcloud/org/foocrm.org" "Open Cases")
-         "* RFQ %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n** Heading: \n** Customer: \n** Customer location: \n** Contact person: \n** Supplier quote: \n** MCN quote: \n** Customer order: \n** MCN order: \n** MCN PO: \n** Supplier OA: \n** Supplier delivery date: \n** MCN delivery date: \n** Actions: \n"))
+         "* RFQ %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n** Heading: \n** Customer: \n** Customer location: \n** Contact person: \n** Supplier: \n** Supplier quote: \n** MCN quote: \n** Customer order: \n** MCN order: \n** MCN PO: \n** Supplier OA: \n** Supplier delivery date: \n** MCN delivery date: \n** Actions: \n"))
       )
 
 ;; Ageda sorting strategy of todos
