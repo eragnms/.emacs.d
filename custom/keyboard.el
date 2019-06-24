@@ -48,10 +48,10 @@
 (setq tab-always-indent 'complete)
 
 ;; Insert today's date in a document
-;; ‘C-c d’: 2004-04-13
-;; ‘C-u C-c d’: 13.04.2004
-;; ‘C-u C-u C-c d’: tisdag, 13. april 2004
-(global-set-key (kbd "C-c d") 'insert-date)
+;; ‘C-c t’: 2004-04-13
+;; ‘C-u C-c t’: 13.04.2004
+;; ‘C-u C-u C-c t’: tisdag, 13. april 2004
+(global-set-key (kbd "C-c t") 'insert-date)
 (defun insert-date (prefix)
     "Insert the current date. With prefix-argument, use ISO format. With
    two prefix arguments, write out the day and month name."
