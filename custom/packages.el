@@ -44,7 +44,8 @@
 		              projectile
                       helm-projectile
                       use-package
-                      volatile-highlights))
+                      volatile-highlights
+                      py-isort))
 
 ;; List the repositories containing them
 (require 'package)
