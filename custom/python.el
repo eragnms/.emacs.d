@@ -37,3 +37,7 @@
 ;;(add-to-list 'load-path "/your/path/")
 (require 'py-isort)
 (add-hook 'before-save-hook 'py-isort-before-save)
+
+;; mypy
+;;(require 'flycheck-mypy)
+;;(add-hook 'python-mode-hook 'flycheck-mode)
