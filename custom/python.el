@@ -39,5 +39,7 @@
 (add-hook 'before-save-hook 'py-isort-before-save)
 
 ;; mypy
-;;(require 'flycheck-mypy)
-;;(add-hook 'python-mode-hook 'flycheck-mode)
+(require 'flycheck-mypy)
+(add-hook 'python-mode-hook 'flycheck-mode)
+(add-to-list 'flycheck-disabled-checkers 'python-flake8)
+(add-to-list 'flycheck-disabled-checkers 'python-pylint)

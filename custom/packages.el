@@ -45,7 +45,8 @@
                       helm-projectile
                       use-package
                       volatile-highlights
-                      py-isort))
+                      py-isort
+                      flycheck-mypy))
 
 ;; List the repositories containing them
 (require 'package)
