@@ -46,11 +46,13 @@
                       use-package
                       volatile-highlights
                       py-isort
-                      flycheck-mypy))
+                      flycheck-mypy
+                      pipenv))
 
 ;; List the repositories containing them
 (require 'package)
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
+;;(add-to-list 'package-archives '("gnu" . "http://mirrors.163.com/elpa/gnu/") t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
