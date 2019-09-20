@@ -34,7 +34,7 @@
 (load-user-file "gnu_plot.el")
 (load-user-file "octave.el")
 (load-user-file "cpp.el")
-(load-user-file "org.el")
+;;(load-user-file "org.el")
 (load-user-file "magit.el")
 (load-user-file "multi_scratch.el")
 (load-user-file "encrypt_files.el")
