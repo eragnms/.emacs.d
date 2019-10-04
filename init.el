@@ -24,7 +24,7 @@
   (load-file (expand-file-name file user-init-dir)))
 
 (load-user-file "packages.el")
-(load-user-file "auto_update.el")
+;;(load-user-file "auto_update.el")
 (load-user-file "apperance.el")
 (load-user-file "python.el")
 (load-user-file "markdown.el")
