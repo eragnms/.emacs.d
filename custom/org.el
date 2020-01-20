@@ -90,3 +90,6 @@
 
 ;; Agenda start week on Monday
 (setq org-agenda-start-on-weekday 1)
+
+;; Make captions appear below tables in Latex
+(setq org-latex-caption-above nil)
