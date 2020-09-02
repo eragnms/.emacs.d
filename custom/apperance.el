@@ -66,13 +66,15 @@
 
 ;; Save the point position for every file, and restore it when that file is
 ;; reloaded.
-(use-package saveplace
-  :init
-  (setq-default save-place t)
-  (setq save-place-forget-unreadable-files t
-        save-place-skip-check-regexp
-        "\\`/\\(?:cdrom\\|floppy\\|mnt\\|/[0-9]\\|\\(?:[^@/:]*@\\)?[^@/:]*[^@/:.]:\\)"))
-
+;;(use-package saveplace
+;;  :init
+;;  (setq-default save-place t)
+;;  (setq save-place-forget-unreadable-files t
+;;        save-place-skip-check-regexp
+;;        "\\`/\\(?:cdrom\\|floppy\\|mnt\\|/[0-9]\\|\\(?:[^@/:]*@\\)?[^@/:]*[^@/:.]:\\)"))
+(if (fboundp #'save-place-mode)
+  (save-place-mode +1)
+  (setq-default save-place t))
 
 ;; Eshell
 ;; The smart display can also be set not to use this extended “edit mode” if
