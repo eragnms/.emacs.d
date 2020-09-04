@@ -92,7 +92,7 @@
 ;;
 
 ;;; Require
-(require 'cl)
+(require 'cl-lib)
 
 ;;; Code:
 

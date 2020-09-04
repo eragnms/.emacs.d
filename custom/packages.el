@@ -7,6 +7,9 @@
 ;; Later changed to:
 ;; https://stackoverflow.com/questions/10092322/how-to-automatically-install-emacs-packages-by-specifying-a-list-of-package-name
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Get rid of warning for depricated cl package
+(setq byte-compile-warnings '(cl-functions))
+
 ;; List the packages we want to have installed
 (setq package-list '( anzu
                       flx-ido

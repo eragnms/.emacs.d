@@ -48,18 +48,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (undo-tree flycheck-mypy py-isort volatile-highlights graphql magit magit-p4 org-bullets smartparens smartparens-config srefactor company-c-headers wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults)))
+   '(undo-tree flycheck-mypy py-isort volatile-highlights graphql org-bullets smartparens smartparens-config srefactor company-c-headers wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults))
  '(safe-local-variable-values
-   (quote
-    ((company-clang-arguments "-I/home/mats/projects/sdr-baseline/include")
+   '((company-clang-arguments "-I/home/mats/projects/sdr-baseline/include")
      (company-clang-arguments "-I/home/mats/projects/SoapySDR_TXRX_Burst_Tester/SoapySDR_TXRX_Burst_Tester/classes/sdr/" "-I/home/mats/projects/SoapySDR_TXRX_Burst_Tester/SoapySDR_TXRX_Burst_Tester/classes/utils/")
      (company-clang-arguments "-I/home/mats/projects/limesdr/include")
      (projectile-project-compilation-cmd . "make -C build -j2")
      (company-clang-arguments "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lib_cellscan_tools/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/")
      (company-clang-arguments "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/include/" "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lib_cellscan_tools/include/")
      (company-clang-arguments "-I/home/mats/projects/cellscan/tabor/cellscan-tabor-lte/lte_scanner/include/")
-     (company-clang-arguments "-I/home/mats/gitdev/cellscan-tabor-wcdma/wcdma_scanner/include/" "-I/home/mats/gitdev/cellscan-tabor-wcdma/example/include"))))
+     (company-clang-arguments "-I/home/mats/gitdev/cellscan-tabor-wcdma/wcdma_scanner/include/" "-I/home/mats/gitdev/cellscan-tabor-wcdma/example/include")))
  '(semantic-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
