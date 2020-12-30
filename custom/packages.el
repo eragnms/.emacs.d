@@ -62,7 +62,7 @@
 ;;(add-to-list 'package-archives '("elpy" . "https://jorgenschaefer.github.io/packages") t)
 
 ;; activate all the packages (in particular autoloads)
-(package-initialize)
+;;(package-initialize)
 
 ;; fetch the list of packages available
 (unless package-archive-contents

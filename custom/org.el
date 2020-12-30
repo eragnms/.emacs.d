@@ -2,6 +2,9 @@
 ;; Customize: https://orgmode.org/worg/org-configs/org-customization-guide.html
 (add-hook 'org-mode-hook 'turn-on-font-lock)
 
+;; set specific browser to open links
+(setq browse-url-browser-function 'browse-url-firefox)
+
 ;; Spell checking
 (add-hook 'org-mode-hook 'flyspell-mode)
 (setq flyspell-issue-message-flag nil)
