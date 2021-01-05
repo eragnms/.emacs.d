@@ -50,7 +50,8 @@
  '(package-selected-packages
    '(undo-tree flycheck-mypy py-isort volatile-highlights graphql org-bullets smartparens smartparens-config srefactor company-c-headers wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults))
  '(safe-local-variable-values
-   '((company-clang-arguments "-I/home/mats/projects/sdr-baseline/include")
+   '((flycheck-checker . python-mypy)
+     (company-clang-arguments "-I/home/mats/projects/sdr-baseline/include")
      (company-clang-arguments "-I/home/mats/projects/SoapySDR_TXRX_Burst_Tester/SoapySDR_TXRX_Burst_Tester/classes/sdr/" "-I/home/mats/projects/SoapySDR_TXRX_Burst_Tester/SoapySDR_TXRX_Burst_Tester/classes/utils/")
      (company-clang-arguments "-I/home/mats/projects/limesdr/include")
      (projectile-project-compilation-cmd . "make -C build -j2")
