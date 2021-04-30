@@ -25,7 +25,8 @@
     ;; if graphic
        (load-theme 'leuven t))
     ;; else (on a terminal, seems ok on termius terminal set to "vt100")
-       (load-theme 'whiteboard))
+       ;(load-theme 'whiteboard))
+       (load-theme 'zenburn t))
 
 ;; Set default font
 ;(set-face-attribute 'default nil
