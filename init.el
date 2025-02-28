@@ -26,31 +26,45 @@
 (load-user-file "packages.el")
 (load-user-file "auto_update.el")
 (load-user-file "apperance.el")
-(load-user-file "python.el")
+(load-user-file "programming.el")
+(load-user-file "org.el")
 (load-user-file "markdown.el")
 (load-user-file "restructured.el")
 (load-user-file "latex.el")
-(load-user-file "perl.el")
 (load-user-file "gnu_plot.el")
-(load-user-file "octave.el")
-(load-user-file "cpp.el")
-(load-user-file "org.el")
+(load-user-file "spelling.el")
 (load-user-file "magit.el")
 (load-user-file "multi_scratch.el")
 (load-user-file "encrypt_files.el")
 (load-user-file "disp_command_settings.el")
 (load-user-file "keyboard.el")
 (load-user-file "tramp.el")
+(load-user-file "misc.el")
+(load-user-file "docker.el")
+(load-user-file "chat_gpt.el")
+;; The wittra.el contains info on how to set Wittra
+;; c-coding style
+;;(load-user-file "wittra.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auth-source-save-behavior nil)
+ '(company-quickhelp-color-background "#4F4F4F")
+ '(company-quickhelp-color-foreground "#DCDCCC")
+ '(custom-safe-themes
+   '("e6df46d5085fde0ad56a46ef69ebb388193080cc9819e2d6024c9c6e27388ba9" "a37d20710ab581792b7c9f8a075fcbb775d4ffa6c8bce9137c84951b1b453016" default))
+ '(nrepl-message-colors
+   '("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3"))
  '(package-selected-packages
-   '(undo-tree flycheck-mypy py-isort volatile-highlights graphql org-bullets smartparens smartparens-config srefactor company-c-headers wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults))
+   '(json-mode multiple-cursors lsp-ui undo-tree flycheck-mypy py-isort volatile-highlights graphql org-bullets smartparens smartparens-config srefactor company-c-headers wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults))
+ '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
  '(safe-local-variable-values
-   '((flycheck-checker . python-mypy)
+   '((default-directory . /home/mats/projects/linux-application/xtrx-beacon/)
+     (default-directory . /home/mats/projects/linux-application/xtrx-beacon)
+     (flycheck-checker . python-mypy)
      (company-clang-arguments "-I/home/mats/projects/sdr-baseline/include")
      (company-clang-arguments "-I/home/mats/projects/SoapySDR_TXRX_Burst_Tester/SoapySDR_TXRX_Burst_Tester/classes/sdr/" "-I/home/mats/projects/SoapySDR_TXRX_Burst_Tester/SoapySDR_TXRX_Burst_Tester/classes/utils/")
      (company-clang-arguments "-I/home/mats/projects/limesdr/include")

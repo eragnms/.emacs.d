@@ -1,3 +1,7 @@
+;; Ivy manual, version 0.13.0. Ivy is an interactive interface for completion
+;; in Emacs.
+;; Emacs uses completion mechanism in a variety of contexts: code, menus,
+;; commands, variables, functions, etc.
 (use-package ivy
   :init
   (progn

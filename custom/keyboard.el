@@ -13,6 +13,9 @@
 ;; Add another way of doing M-x
 (bind-key "C-c x" 'execute-extended-command)
 
+;; Key for kill-region-save, i.e. copy selected text
+(global-set-key (kbd "C-c f") 'kill-ring-save)
+
 ;; Insert new empty line below current line
 (defun newline-without-break-of-line ()
   (interactive)
@@ -29,7 +32,7 @@
 (defun my-kill-whole-line()
   (interactive)
   (kill-whole-line))
-(global-set-key (kbd "M-n") 'my-kill-whole-line)
+(global-set-key (kbd "C-c k") 'my-kill-whole-line)
 
 ;; In shell mode cycle through previous commands
 (global-set-key (kbd "C-x p") 'comint-previous-input)
@@ -62,3 +65,9 @@
                    ((equal prefix '(16)) "%A, %d. %B %Y")))
           (system-time-locale "se_SE"))
       (insert (format-time-string format))))
+
+;; Shortcuts for writegood-mode
+;; https://github.com/bnbeckwith/writegood-mode
+(global-set-key "\C-cg" 'writegood-mode)
+(global-set-key "\C-c\C-gg" 'writegood-grade-level)
+(global-set-key "\C-c\C-ge" 'writegood-reading-ease)

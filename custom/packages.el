@@ -15,22 +15,18 @@
                       flx-ido
                       auto-package-update
                       company
-                      elpy
                       flycheck
                       wgrep
                       iedit
                       better-defaults
                       py-autopep8
-                      org
-                      helm
-                      helm-gtags
                       function-args
                       sr-speedbar
-		              magit
-		              markdown-mode
-		              company-c-headers
-		              srefactor
-		              smartparens
+		      magit
+		      markdown-mode
+		      company-c-headers
+		      srefactor
+		      smartparens
                       free-keys
                       bind-key
                       undo-tree
@@ -38,31 +34,59 @@
                       dtrt-indent
                       ws-butler
                       which-key
-                      org-bullets
                       ghub
-                      magit-p4
                       treepy
                       graphql
                       zygospore
-		              projectile
-                      helm-projectile
+		      projectile
                       use-package
                       volatile-highlights
-                      py-isort
-                      flycheck-mypy
-                      pipenv))
+                      zenburn-theme
+                      hc-zenburn-theme
+                      spacemacs-theme
+                      writegood-mode
+                      lsp-mode
+		      yasnippet
+		      lsp-treemacs
+		      hydra
+		      avy
+		      dap-mode
+		      lsp-python-ms
+		      lsp-ui
+		      eglot
+              counsel
+              counsel-projectile
+              htmlize
+              go-mode
+	   	      elpy
+          helm
+          helm-xref
+          helm-lsp
+          helm-gtags
+          helm-projectile
+          dockerfile-mode
+          gptel
+          dash
+          s
+          editorconfig
+          all-the-icons
+          json-mode
+             org-bullets
+              org
+              org-analyzer
+              web-mode
+              typescript-mode
+              ))
+
+
 
 ;; List the repositories containing them
 (require 'package)
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
-;;(add-to-list 'package-archives '("gnu" . "http://mirrors.163.com/elpa/gnu/") t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-;;(add-to-list 'package-archives '("elpy" . "https://jorgenschaefer.github.io/packages") t)
-
-;; activate all the packages (in particular autoloads)
-;;(package-initialize)
+(add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
+;; In case we need to access old org archives use below repos
+;(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
 ;; fetch the list of packages available
 (unless package-archive-contents

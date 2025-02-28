@@ -49,7 +49,6 @@
   :init
   (global-undo-tree-mode 1))
 
-
 ;; Package: yasnippet
 ;; GROUP: Editing -> Yasnippet
 ;; Package: yasnippet

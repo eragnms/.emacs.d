@@ -2,23 +2,22 @@
 ;; Customize: https://orgmode.org/worg/org-configs/org-customization-guide.html
 (add-hook 'org-mode-hook 'turn-on-font-lock)
 
+;; Define how much shall be folded when a document is opened
+;; https://orgmode.org/manual/Initial-visibility.html
+;;
+;; Non-nil means entering Org mode will switch to OVERVIEW.
+;; This can also be configured on a per-file basis by adding one of
+;; the following lines anywhere in the buffer:
+;;   #+STARTUP: fold              (or ‘overview’, this is equivalent)
+;;   #+STARTUP: nofold            (or ‘showall’, this is equivalent)
+;;   #+STARTUP: content
+;;   #+STARTUP: showeverything
+;;
+;; Show overview when open
+(setq org-startup-folded t)
+
 ;; set specific browser to open links
 (setq browse-url-browser-function 'browse-url-firefox)
-
-;; Spell checking
-(add-hook 'org-mode-hook 'flyspell-mode)
-(setq flyspell-issue-message-flag nil)
-(setq ispell-program-name "aspell")
-(setq ispell-list-command "--list")
-(let ((langs '("english" "svenska")))
-  (setq lang-ring (make-ring (length langs)))
-  (dolist (elem langs) (ring-insert lang-ring elem)))
-(defun cycle-ispell-languages ()
-  (interactive)
-  (let ((lang (ring-ref lang-ring -1)))
-    (ring-insert lang-ring lang)
-    (ispell-change-dictionary lang)))
-(global-set-key [f6] 'cycle-ispell-languages)
 
 ;; Files to run in org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -36,7 +35,6 @@
 ;;(setq org-todo-keywords
 ;;      '((sequence "☛ TODO(t)" "⚑ ONGOING(o)" "|" "✔ DONE(d)")))
 
-
 ;; Note the time when a TODO was closed
 (setq org-log-done 'time)
 
@@ -47,11 +45,11 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 ;; Some default files and folders
-(setq org-default-notes-file "~/nextcloud/org/inbox.org")
-(setq org-directory "~/nextcloud/org/")
+(setq org-default-notes-file "~/orgsync/org/inbox.org")
+(setq org-directory "~/orgsync/org/")
 
 ;; Those are the files from which org will build the agenda
-(add-to-list 'load-path "~/nextcloud/org/agenda")
+(add-to-list 'load-path "~/orgsync/org/agenda")
 (require 'setup-org-agenda-list)
 
 ;; Apperance
@@ -77,9 +75,9 @@
 
 ;; Default values for todos
 (setq org-capture-templates
-      '(("t" "todo" entry (file+headline "~/nextcloud/org/inbox.org" "Tasks")
+      '(("t" "todo" entry (file+headline "~/orgsync/org/inbox.org" "Tasks")
          "* TODO %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n")
-        ("f" "foocrm" entry (file+headline "~/nextcloud/org/foocrm.org" "Open Cases")
+        ("f" "foocrm" entry (file+headline "~/orgsync/org/foocrm.org" "Open Cases")
          "* RFQ %?\nSCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))\n\n|Heading:||\n|-|\n|Customer:||\n|Customer location:||\n|Contact person:||\n|Supplier:||\n|Supplier quote:||\n|MCN quote:||\n|Customer order:||\n|MCN order:||\n|MCN PO:||\n|Supplier OA:||\n|Supplier delivery date:||\n|MCN delivery date:||\n\n** Actions: \n"))
       )
 
@@ -96,3 +94,13 @@
 
 ;; Make captions appear below tables in Latex
 (setq org-latex-caption-above nil)
+
+;; For figure references when generating latex
+;; https://emacs.stackexchange.com/questions/32648/in-org-mode-how-do-i-reference-a-figure
+(setq org-latex-prefer-user-labels t)
+
+;; Turn off WindMove
+;; WindMove will otherwise shift window on S-arrow, which I want to use
+;; in org mode to change timestamps. With the new keybinding set up int
+;; programming.el, I think I can start using windmove again.
+; (windmove-mode 0)

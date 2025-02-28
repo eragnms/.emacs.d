@@ -13,9 +13,9 @@
 ;; “java”: The default style for java-mode (see below)
 ;; “user”: When you want to define your own style
 ;;(setq c-default-style) "linux" ;; set style to "linux"
-(setq c-default-style "linux")
-;;(setq c-default-style "linux"
-;;      c-basic-offset 4)
+;;(setq c-default-style "linux")
+(setq c-default-style "linux"
+      c-basic-offset 4)
 
 ;;(use-package cc-mode
 ;;  :init
@@ -25,11 +25,6 @@
 (provide 'setup-c)
 
 ;; Added by mats
-
-;; Jump within a block and mark block
-(bind-key "C-c d" 'forward-sexp)
-(bind-key "C-c u" 'backward-sexp)
-(bind-key "C-c m" 'mark-sexp)
 
 ;; Toggle hide block
 (bind-key "C-c h" 'hs-toggle-hiding)
@@ -43,5 +38,5 @@
 (add-hook 'c++-mode-hook
           (function (lambda ()
                       (whitespace-mode t))))
-(setq whitespace-line-column 78) ;; limit line length
+(setq whitespace-line-column 80) ;; limit line length
 (setq whitespace-style '(face lines-tail))
