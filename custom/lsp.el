@@ -1,8 +1,7 @@
 ;; Lanugage Server Protocol (LSP)
 ;; Installation:
 ;; - $ sudo pacman -S clang
-;; - $ pip install scan-build
-;; - $ pip install "ptvsd>=4.2"
+;; - $ sudo pacman -S python-lsp-server
 ;; To build compilation database for clang, use scan-build: $ intercept-build <make command>.
 ;; This will generate a "compile_commands.json" file where run.
 ;;

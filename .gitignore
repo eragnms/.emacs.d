@@ -19,3 +19,4 @@ transient/history.el
 emacs_command_generator.el
 emacs_command_generator.py
 gptel.el
+.lsp-session-v1
