@@ -3,7 +3,7 @@
 
 ;; enable line numbers globally and add a padding of choice
 (when (version<="26.0.50" emacs-version)
-  (global-display-line-numbers-mode)) 
+  (global-display-line-numbers-mode))
 (if (display-graphic-p)
     (progn
       ;; if graphic
@@ -43,7 +43,7 @@
 ;; Set default font
 ;; Desktop font
 (add-to-list 'default-frame-alist
-             '(font . "DejaVu Sans Mono-8"))
+             '(font . "DejaVu Sans Mono-10"))
 ;; Laptop font
 ;(add-to-list 'default-frame-alist
 ;             '(font . "DejaVu Sans Mono-12"))
