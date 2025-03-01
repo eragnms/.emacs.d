@@ -62,7 +62,18 @@
    '(json-mode multiple-cursors lsp-ui undo-tree flycheck-mypy py-isort volatile-highlights graphql org-bullets smartparens smartparens-config srefactor company-c-headers wgrep use-package sr-speedbar py-autopep8 org iedit helm-projectile helm-gtags function-args flycheck elpy better-defaults))
  '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
  '(safe-local-variable-values
-   '((default-directory . /home/mats/projects/linux-application/xtrx-beacon/)
+   '((eval progn
+           (setq-local my-local-root
+                       (projectile-project-root))
+           (setq-local my-local-path
+                       (expand-file-name "." my-local-root))
+           (setq dap-debug-template-configurations
+                 `(("Local Pytest Debug" :type "python" :request "attach" :connect
+                    (:host "localhost" :port 5678)
+                    :name "Local Pytest Debug" :pathMappings
+                    (((:localRoot \, my-local-path)
+                      (:remoteRoot \, my-local-path)))))))
+     (default-directory . /home/mats/projects/linux-application/xtrx-beacon/)
      (default-directory . /home/mats/projects/linux-application/xtrx-beacon)
      (flycheck-checker . python-mypy)
      (company-clang-arguments "-I/home/mats/projects/sdr-baseline/include")
