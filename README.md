@@ -35,6 +35,16 @@ cd projects
 git clone https://github.com/zerolfx/copilot.el
 ```
 
+Then in Emacs do:
+
+```console
+M-x copilot-install-server
+M-x copilot-login
+```
+
+Then check the status by M-x copilot-diagnose (NotAuthorized means you don't
+have a valid subscription).
+
 ## LSP
 
 Install the below packages:
