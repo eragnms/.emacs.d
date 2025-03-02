@@ -1,26 +1,47 @@
-# Installation #
+# Installation
 
-## This configuration package ##
+## Clone this Emacs config
 
 Assuming emacs is installed, do:
 
-    $ cd
-    $ mv .emacs .emacs_bkp
-    $ mv .emacs.d .emacs.d_bkp
-    $ git clone https://github.com/eragnms/.emacs.d
+```console
+cd
+mv .emacs .emacs_bkp
+mv .emacs.d .emacs.d_bkp
+git clone https://github.com/eragnms/.emacs.d
+```
 
-
-## C++ mode ##
+## C++ mode
 
 - In the root of your project create a file .dir-local.el
 - Install GNU globals
 - Install clang (On Arch Linux: # pacman -S clang)
 - In the root of your project run:
 
-    $ gtags
-    
-## TODO ##
+```console
+gtags
+```
 
-- Investigate why Emacs is slow:
-  https://www.reddit.com/r/emacs/comments/4cqy6s/emacs_very_slow_browsing_big_files/
+## Copilot
 
+Add the files gptel.el and emacs_command_generator.el to the folder
+custom. Make sure they are ignored by git (they should already be in
+.gitignore). Then do:
+
+```console
+sudo pacman -S nodejs npm
+sudo npm install -g @github/copilot-language-server
+cd projects
+git clone https://github.com/zerolfx/copilot.el
+```
+
+## LSP
+
+Install the below packages:
+
+```console
+sudo pacman -S clang
+sudo pacman -S python-lsp-server
+```
+
+## TODO

@@ -66,6 +66,15 @@
            (setq-local my-local-root
                        (projectile-project-root))
            (setq-local my-local-path
+                       (expand-file-name "linux-application/wipe" my-local-root))
+           (setq dap-debug-template-configurations
+                 `(("Docker Pytest Debug" :type "python" :request "attach" :hostName "localhost" :port 5678 :name "Docker Pytest Debug" :pathMappings
+                    (((:localRoot \, my-local-path)
+                      (:remoteRoot . "/usr/src/app/linux-application/wipe")))))))
+     (eval progn
+           (setq-local my-local-root
+                       (projectile-project-root))
+           (setq-local my-local-path
                        (expand-file-name "." my-local-root))
            (setq dap-debug-template-configurations
                  `(("Local Pytest Debug" :type "python" :request "attach" :connect
