@@ -43,7 +43,7 @@
 ;; Set default font
 ;; Desktop font
 (add-to-list 'default-frame-alist
-             '(font . "DejaVu Sans Mono-10"))
+             '(font . "DejaVu Sans Mono-12"))
 ;; Laptop font
 ;(add-to-list 'default-frame-alist
 ;             '(font . "DejaVu Sans Mono-12"))

@@ -22,6 +22,11 @@ git clone https://github.com/eragnms/.emacs.d
 gtags
 ```
 
+## Spell checking
+
+```console
+sudo pacman -S aspell aspell-en
+```
 ## Copilot
 
 Add the files gptel.el and emacs_command_generator.el to the folder
